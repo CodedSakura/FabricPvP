@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "fabricpvp",
+  "version": "${version}",
+  "name": "FabricPvP",
+  "description": "FabricPvP is a small, server-side Fabric mod that lets players choose whether they want to participate in PvP",
+  "authors": [
+    "CodedSakura"
+  ],
+  "contact": {
+    "website": "http://mods.codedsakura.eu",
+    "homepage": "http://codedsakura.eu",
+    "sources": "https://github.com/CodedSakura/FabricPvP",
+    "repo": "https://github.com/CodedSakura/FabricPvP",
+    "issues": "https://github.com/CodedSakura/FabricPvP/issues"
+  },
+  "license": "ISC",
+  "icon": "assets/FabricPvP/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "eu.codedsakura.fabricpvp.FabricPvP"
+    ],
+    "cardinal-components-entity": [
+      "eu.codedsakura.fabricpvp.PlayerComponentInitializer"
+    ]
+  },
+  "mixins": [
+    "fabricpvp.mixins.json"
+  ],
+  "custom": {
+    "cardinal-components": ["fabricpvp:pvp"]
+  },
+  "depends": {
+    "fabricloader": ">=0.10.6+build.214",
+    "fabric": "*",
+    "minecraft": "^1.16.2"
+  }
+}
